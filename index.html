@@ -1,0 +1,259 @@
+<html>
+<head>
+<link href="assets/css/style.css" rel="stylesheet">
+<title>NUR SHUHADA</title>
+</head>
+<body>
+
+<header>
+<a href="index.html">
+   
+
+</a>
+</header>
+
+           <nav>
+               <div class="menu">
+              
+               <ul>
+               <li><a href="index.html">HOMEPAGE</a></li>
+               <li><a href="biodata.html">BIODATA</a></li>
+                <li><a href="experience.html">EXPERIENCE</a></li>
+               <li><a href="education.html">EDUCATION</a></li>
+               <li><a href="family.html">FAMILY</a></li>
+               <li><a href="gallery.html">GALLERY</a></li>
+               <li><a href="videos.html">VIDEOS</a></li>
+               </ul>
+ 
+          </div>
+          </nav>
+<br><br><br><br><br>
+
+
+
+
+<center>
+<marquee width="100%" direction="loop" height="100px"><font size"100%" color="blue black">
+<i><b><u><h1><font size="150"> WELCOME TO MY PAGE </h1><i><b></u><h1></font size="150">
+</marquee>
+<hr>
+<br><br><br>
+
+<style>
+img {
+  border-radius: 50%;
+}
+</style>
+<img src="assets/image/welcome.jpg" alt="welcoming picture" width="1200" height="400">
+
+
+
+
+
+<center>
+<h1><font size="70% font color="black">ADVERTISMENT</h1></font size="70% font color="black">
+<br>
+
+<button type="button" onclick="alert('Hello there, enjoy my page!')">Click Me!</button>
+
+<br>
+<br>
+<audio controls autoplay muted>
+  <source src="assets/fifasong.mp3" type="audio/ogg">
+  <source src="assets/fifasong.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<br><br><br><br><br>
+
+<center>
+<footer>
+  <p><h2><font size"100%" color="black"> NUR SHUHADA AZHAR <font size"100%" color="black"></h2></p>
+  <p><h3><i><b>DIPLOMA IN INFORMATION MANAGEMENT</h3></p></i></b>
+  <p><h4><i><b> UNIVERSITY TECHNOLOGY MARA</4></p></i></b>
+  <p><h5><i><b> KIM1105C</h5></p></i></b>
+
+
+
+
+</footer>
+</center>
+
+
+
+<center>
+<canvas id="canvas" width="400" height="400"
+style="background-color:black">
+</canvas>
+
+<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+setInterval(drawClock, 1000);
+
+function drawClock() {
+  drawFace(ctx, radius);
+  drawNumbers(ctx, radius);
+  drawTime(ctx, radius);
+}
+
+function drawFace(ctx, radius) {
+  var grad;
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, 0, 2*Math.PI);
+  ctx.fillStyle = 'white';
+  ctx.fill();
+  grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+  grad.addColorStop(0, '#333');
+  grad.addColorStop(0.5, 'white');
+  grad.addColorStop(1, '#333');
+  ctx.strokeStyle = grad;
+  ctx.lineWidth = radius*0.1;
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+  ctx.fillStyle = '#333';
+  ctx.fill();
+}
+
+function drawNumbers(ctx, radius) {
+  var ang;
+  var num;
+  ctx.font = radius*0.15 + "px arial";
+  ctx.textBaseline="middle";
+  ctx.textAlign="center";
+  for(num = 1; num < 13; num++){
+    ang = num * Math.PI / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.85);
+    ctx.rotate(-ang);
+    ctx.fillText(num.toString(), 0, 0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.85);
+    ctx.rotate(-ang);
+  }
+}
+
+function drawTime(ctx, radius){
+    var now = new Date();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var second = now.getSeconds();
+    //hour
+    hour=hour%12;
+    hour=(hour*Math.PI/6)+
+    (minute*Math.PI/(6*60))+
+    (second*Math.PI/(360*60));
+    drawHand(ctx, hour, radius*0.5, radius*0.07);
+    //minute
+    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+    drawHand(ctx, minute, radius*0.8, radius*0.07);
+    // second
+    second=(second*Math.PI/30);
+    drawHand(ctx, second, radius*0.9, radius*0.02);
+}
+
+function drawHand(ctx, pos, length, width) {
+    ctx.beginPath();
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.moveTo(0,0);
+    ctx.rotate(pos);
+    ctx.lineTo(0, -length);
+    ctx.stroke();
+    ctx.rotate(-pos);
+}
+</script>
+</center>
+
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<Title>   
+</Title>
+
+</style>
+</Head>
+<Body> 
+ <br>
+<style>
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+
+</style>
+</head>
+<body>
+
+<h2> My Social Media Buttons</h2>
+
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-pinterest"></a>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
